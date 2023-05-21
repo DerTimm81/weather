@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# my local files, not to be shared
+config.ini
+
 # C extensions
 *.so
 
