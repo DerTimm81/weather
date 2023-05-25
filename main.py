@@ -42,6 +42,7 @@ if config['API']['ConnectToWeatherLinkServer'] == "True":
 if config['API']['ConnectToLocalWeatherLink'] == "True":
     print("Trying to connect to WeatherLink in your network (just using local wifi)...")
 
+    # WRAP in a try
     devices = wlll.discover()
     # print(devices)
 
@@ -56,6 +57,7 @@ if config['API']['ConnectToLocalWeatherLink'] == "True":
         wind_speed=wlll.units.WindSpeedUnit.METER_PER_SECOND,
     )
 
+    # WRAP in a try!
     conditions = wlll.get_conditions(ip_first_device)
     print(f"Inside temperature:  {conditions.inside.temp:.2f} °C")
     print(f"Outside temperature: {conditions.integrated_sensor_suites[0].temp:.2f} °C")
