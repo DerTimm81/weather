@@ -9,7 +9,7 @@ import requests
 import collections
 
 
-class WeatherLink:
+class WeatherLink_Server:
 
     API_URL_V2 = 'https://api.weatherlink.com/v2/'
 
